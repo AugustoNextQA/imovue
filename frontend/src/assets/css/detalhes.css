@@ -43,7 +43,7 @@
   }
 }
 
-.imoveis {
+.detalhes {
   margin-top: 4%;
 }
 
@@ -578,7 +578,7 @@ textarea.input-field {
 }
 
 @media (max-width: 1700px) {
-  .imoveis {
+  .detalhes {
     margin-top: 6%;
   }
 

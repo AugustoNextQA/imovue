@@ -1,5 +1,5 @@
 <template>
-  <section class="imoveis">
+  <section class="detalhes">
     <div id="spinner" class="spinner" style="display: none;">
       <div class="double-bounce1"></div>
       <div class="double-bounce2"></div>
