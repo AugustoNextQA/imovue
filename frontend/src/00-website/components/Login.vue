@@ -3,7 +3,7 @@
     <header class="header" data-header>
       <div class="container">
         <router-link to="/" class="logo">
-          <img src="@/assets/imagens/website/logo.png" alt="NextQA logo" />
+          <img src="@/00-website/assets/imagens/logo.png" alt="NextQA logo" />
         </router-link>
         <button class="menu-toggle-btn" data-nav-toggle-btn></button>
       </div>
@@ -50,5 +50,5 @@ export default {
 </script>
 
 <style scoped>
-@import '@/assets/css/website/login.css';
+@import '@/00-website/assets/css/login.css';
 </style>

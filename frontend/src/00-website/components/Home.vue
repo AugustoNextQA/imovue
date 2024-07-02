@@ -6,7 +6,7 @@
       <div class="double-bounce3"></div>
     </div>
     <div class="search">
-      <img class="search__img" src="@/assets/imagens/website/home/fundo.jpg" alt="fundo" />
+      <img class="search__img" src="@/00-website/assets/imagens/home/fundo.jpg" alt="fundo" />
       <form class="search__form">
         <div class="form__tab_container">
           <button type="button" id="comprar-select" class="form__tab-button active" @click="toggleTab('comprar')"
@@ -42,7 +42,7 @@
         </div>
 
         <button type="button" class="form__submit-btn">
-          <img src="@/assets/imagens/website/lupa.png" alt="Buscar">
+          <img src="@/00-website/assets/imagens/lupa.png" alt="Buscar">
         </button>
       </form>
     </div>
@@ -156,5 +156,5 @@ export default {
 </script>
 
 <style scoped>
-@import '@/assets/css/website/home.css';
+@import '@/00-website/assets/css/home.css';
 </style>

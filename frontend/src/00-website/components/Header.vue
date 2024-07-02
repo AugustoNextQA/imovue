@@ -2,7 +2,7 @@
   <header class="header" data-header>
     <div class="container-header">
       <a href="/" class="logo">
-        <img src="@/assets/imagens/website/logo.png" alt="AGAS Imóveis logo" />
+        <img src="@/00-website/assets/imagens/logo.png" alt="AGAS Imóveis logo" />
       </a>
 
       <button class="menu-toggle-btn" data-nav-toggle-btn>
@@ -64,5 +64,5 @@ export default {
 </script>
 
 <style scoped>
-@import '@/assets/css/website/header.css';
+@import '@/00-website/assets/css/header.css';
 </style>

@@ -18,7 +18,7 @@
             <button class="clear-button">&times;</button>
           </div>
           <button class="search-button" @click="applySearch">
-            <img src="@/assets/imagens/website/lupa.png" alt="Buscar">
+            <img src="@/00-website/assets/imagens/lupa.png" alt="Buscar">
           </button>
         </div>
         <div id="searchResults" class="search-results"></div>

@@ -266,7 +266,7 @@ input:checked+.slider:before {
 }
 
 .icon {
-  background-image: url('../../imagens/expandir.png');
+  background-image: url('../imagens/expandir.png');
   background-size: cover;
   width: 16px;
   height: 16px;

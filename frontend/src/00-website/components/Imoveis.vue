@@ -181,5 +181,5 @@ export default {
 </script>
 
 <style scoped>
-@import '@/assets/css/website/imoveis.css';
+@import '@/00-website/assets/css/imoveis.css';
 </style>

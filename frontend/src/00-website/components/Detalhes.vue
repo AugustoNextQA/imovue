@@ -29,7 +29,7 @@
           <div class="sobre-imovel">
             <div class="icone-wrapper" id="areaTotalContainer">
               <span class="icon-area">
-                <img src="@/assets/imagens/website/detalhes/wide 1.png" alt="Ícone-area">
+                <img src="@/00-website/assets/imagens/detalhes/wide 1.png" alt="Ícone-area">
               </span>
               <hr>
               <div class="text-content">
@@ -39,7 +39,7 @@
             </div>
             <div class="icone-wrapper">
               <span class="icon-terreno">
-                <img src="@/assets/imagens/website/detalhes/terreno.png" alt="Ícone-terreno">
+                <img src="@/00-website/assets/imagens/detalhes/terreno.png" alt="Ícone-terreno">
               </span>
               <hr>
               <div class="text-content">
@@ -49,7 +49,7 @@
             </div>
             <div class="icone-wrapper">
               <span class="icon-bed">
-                <img src="@/assets/imagens/website/detalhes/bed 1.png" alt="Ícone-bed">
+                <img src="@/00-website/assets/imagens/detalhes/bed 1.png" alt="Ícone-bed">
               </span>
               <hr>
               <div class="text-content">
@@ -59,7 +59,7 @@
             </div>
             <div class="icone-wrapper">
               <span class="icon-bathroom">
-                <img src="@/assets/imagens/website/detalhes/shower 1.png" alt="Ícone-bathroom">
+                <img src="@/00-website/assets/imagens/detalhes/shower 1.png" alt="Ícone-bathroom">
               </span>
               <hr>
               <div class="text-content">
@@ -69,7 +69,7 @@
             </div>
             <div class="icone-wrapper">
               <span class="icon-garage">
-                <img src="@/assets/imagens/website/detalhes/garagem 1.png" alt="Ícone-garage">
+                <img src="@/00-website/assets/imagens/detalhes/garagem 1.png" alt="Ícone-garage">
               </span>
               <hr>
               <div class="text-content">
@@ -125,7 +125,7 @@
           <a aria-label="Fale no WhatsApp" href="https://wa.me/551531901451" class="contact" id="contactButton"
             @click="openWhatsApp">
             <img alt="" class="whatsappImg" referrerpolicy="origin-when-cross-origin"
-              src="@/assets/imagens/website/WhatsAppButtonGreenSmall.png">
+              src="@/00-website/assets/imagens/WhatsAppButtonGreenSmall.png">
           </a>
         </div>
       </div>
@@ -152,5 +152,5 @@ export default {
 </script>
 
 <style scoped>
-@import '@/assets/css/website/detalhes.css';
+@import '@/00-website/assets/css/detalhes.css';
 </style>
