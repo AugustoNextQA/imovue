@@ -9,7 +9,7 @@
       </div>
     </header>
     <section class="loginSection" id="loginSection">
-      <form class="login-form" id="loginForm" @submit.prevent="handleLogin">
+      <form class="login-form" id="loginForm" @submit="fazerLogin">
         <h2 class="login-title">Iniciar sessão</h2>
         <div class="form-group">
           <label for="username">Nome de usuário</label>
@@ -28,23 +28,76 @@
         </div>
       </form>
     </section>
-    <div id="popupSection"></div>
+    <Popup ref="popupComponent" />
   </div>
 </template>
 
 <script>
+import Popup from './Popup.vue';
+
 export default {
   name: 'Login',
-  methods: {
-    handleLogin() {
-      // Implement login logic here
-    },
-    carregarPopup() {
-      // Implement popup logic here
-    }
+  components: {
+    Popup
   },
-  mounted() {
-    this.carregarPopup();
+  methods: {
+    async fazerLogin(event) {
+      event.preventDefault();
+
+      const username = document.getElementById('usernameLogin').value;
+      const senha = document.getElementById('passwordLogin').value;
+
+      this.limparRespostas();
+
+      try {
+        const response = await fetch(`${process.env.VUE_APP_BACKEND_URL}/login`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username, senha })
+        });
+
+        if (!response.ok) {
+          const data = await response.json();
+          throw new Error(data.mensagem);
+        }
+
+        const data = await response.json();
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('nome', data.nome);
+
+        await this.$refs.popupComponent.showAlert('Login bem-sucedido!');
+        setTimeout(() => {
+          this.$router.push('/admin');
+        }, 1000);
+      } catch (error) {
+        let idElemento;
+        if (error.message.includes('obrigatórios')) {
+          idElemento = document.getElementById('error-message-all-login');
+        } else if (error.message.includes('Usuário')) {
+          idElemento = document.getElementById('error-message-username-login');
+        } else if (error.message.includes('Senha')) {
+          idElemento = document.getElementById('error-message-senha-login');
+        } else if (error.message.includes('Acesso negado')) {
+          await this.$refs.popupComponent.showAlert('Acesso negado. Apenas administradores podem fazer login.');
+          return;
+        }
+
+        if (idElemento) {
+          idElemento.textContent = error.message;
+          idElemento.style.display = 'block';
+        } else {
+          console.error('Erro inesperado no login:', error.message);
+        }
+      }
+    },
+
+    limparRespostas() {
+      const errorMessageElements = document.querySelectorAll('.error-message-input');
+      errorMessageElements.forEach(element => {
+        element.textContent = '';
+        element.style.display = 'none';
+      });
+    }
   }
 }
 </script>
