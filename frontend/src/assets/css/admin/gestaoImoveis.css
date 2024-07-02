@@ -1,0 +1,512 @@
+.spinner {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.double-bounce1,
+.double-bounce2,
+.double-bounce3 {
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  border-radius: 50%;
+  animation: bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  animation-delay: -1.0s;
+}
+
+.double-bounce3 {
+  animation-delay: -0.5s;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 1%;
+}
+
+.header {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header span {
+  font-weight: 900;
+  font-size: 20px;
+  word-break: break-all;
+}
+
+.button-header {
+  display: flex;
+  gap: 50px;
+}
+
+#visitasBtn {
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  color: black;
+  background-color: none;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+#visitasBtn:hover {
+  background-color: rgba(0, 0, 0, 0.100);
+  transition: background-color 0.3s ease;
+}
+
+#new {
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+#new:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  transition: background-color 0.3s ease;
+}
+
+.divTable {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.divTable::-webkit-scrollbar {
+  width: 12px;
+  background-color: whitesmoke;
+}
+
+.divTable::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: darkgray;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+thead {
+  background-color: #f0f0f0;
+}
+
+tr {
+  border-bottom: 1px solid #ccc;
+}
+
+tbody tr td {
+  vertical-align: middle;
+  padding: 7px;
+}
+
+thead tr th {
+  text-align: start;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+tbody tr:hover {
+  background-color: #ebebeb;
+}
+
+.id_imovel,
+.categoria,
+.endereco,
+.valor {
+  display: flex;
+  padding: 10px;
+}
+
+th>div.id_imovel:hover,
+th>div.categoria:hover,
+th>div.endereco:hover,
+th>div.valor:hover {
+  display: flex;
+  cursor: pointer;
+  background-color: #d4d4d4;
+}
+
+th:nth-child(3) {
+  width: 500px;
+}
+
+thead tr th.publicar,
+thead tr th.destaque,
+thead tr th.acao {
+  text-align: center;
+  width: 130px;
+}
+
+tbody tr td.visibilidadeCell,
+tbody tr td.destaqueCell,
+tbody tr td.acao {
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+}
+
+tbody tr td.acao {
+  display: flex;
+}
+
+button.editar,
+button.excluir {
+  background-size: cover;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  padding: 11px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 22px;
+  height: 22px;
+}
+
+button.editar {
+  background-image: url(../imagens/admin/editar.png);
+}
+
+button.excluir {
+  background-image: url(../imagens/admin/excluir.png);
+}
+
+button.editar:hover {
+  background-image: url(../imagens/admin/editar-hover.png);
+  transition: background-image 0.3s ease;
+}
+
+button.excluir:hover {
+  background-image: url(../imagens/admin/excluir-vermelho.png);
+  transition: background-image 0.3s ease;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked+.slider {
+  background-color: #000;
+}
+
+input:checked+.slider:before {
+  transform: translateX(20px);
+}
+
+.icon {
+  background-image: url('../../imagens/expandir.png');
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  margin-top: 2.5px;
+  transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+/* Paginação */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.pagination .custom-select {
+  margin-right: 10px;
+  position: relative;
+}
+
+.btn-pagination {
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+}
+
+.btn-pagination .btn-navigation {
+  background-color: black;
+  color: white;
+  padding-bottom: 2px;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  font-size: 20px;
+}
+
+.btn-pagination .btn-navigation:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+.btn-pagination .btn-navigation:hover {
+  background-color: rgba(0, 0, 0, 0.850);
+  transition: background-color 0.5s ease;
+}
+
+.page-number {
+  background-color: #fff;
+  border: 1px solid #000000;
+  border-radius: 30px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 15px 15px;
+}
+
+.page-number:hover {
+  background-color: rgba(0, 0, 0, 0.150);
+  transition: background-color 0.5s ease;
+}
+
+#currentPageIndicator {
+  padding: 15px;
+  font-size: 16px;
+}
+
+.paginationDropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 70px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  margin-bottom: 500px;
+}
+
+.paginationDropdown-content button {
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.paginationDropdown-content button:hover {
+  background-color: rgba(0, 0, 0, 0.10);
+  transition: background-color 0.2s ease;
+}
+
+.show {
+  display: block;
+}
+
+/* Barra de Pesquisa */
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  position: relative;
+}
+
+.header-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.search-results {
+  position: absolute;
+  background-color: white;
+  top: calc(98%);
+  width: 47.3%;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-results div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.search-results .selectable-option:hover {
+  background-color: #f1f1f1;
+}
+
+.search-results strong {
+  display: block;
+  padding: 10px 10px 10px 5px;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+  cursor: default;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  background: none;
+  border: 1px solid #000;
+  border-right: none;
+  border-radius: 40px 0 0 40px;
+  font-size: 13px;
+  position: relative;
+  box-sizing: border-box;
+  z-index: 0;
+  outline: none;
+}
+
+.search-bar:focus {
+  border-color: #000;
+}
+
+.search-button {
+  width: 40px;
+  height: 38px;
+  background-color: #000;
+  border: none;
+  border-radius: 0 40px 40px 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin-left: -1px;
+  z-index: 0;
+  outline: none;
+}
+
+.search-button:hover {
+  background-color: rgba(0, 0, 0, 0.850);
+  transition: background-color 0.5s ease;
+}
+
+.search-button img {
+  width: 16px;
+  height: 16px;
+}
+
+.clear-button-container {
+  width: 40px;
+  height: 38px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.clear-button-container:hover {
+  background-color: #00000018;
+}
+
+.clear-button {
+  border: none;
+  background: none;
+  color: black;
+  margin-bottom: 5px;
+}
+
+.selected-results button {
+  float: right;
+  margin-top: -30px;
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 10px;
+  }
+
+  .header span {
+    font-size: 15px;
+  }
+
+  #new {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+
+  thead tr th.acao {
+    width: auto !important;
+  }
+}

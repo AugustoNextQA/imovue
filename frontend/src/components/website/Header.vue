@@ -2,7 +2,7 @@
   <header class="header" data-header>
     <div class="container-header">
       <a href="/" class="logo">
-        <img src="@/assets/imagens/logo.png" alt="AGAS Imóveis logo" />
+        <img src="@/assets/imagens/website/logo.png" alt="AGAS Imóveis logo" />
       </a>
 
       <button class="menu-toggle-btn" data-nav-toggle-btn>

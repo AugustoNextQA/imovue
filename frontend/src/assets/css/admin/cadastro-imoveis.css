@@ -1,0 +1,430 @@
+.spinner {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.double-bounce1,
+.double-bounce2,
+.double-bounce3 {
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  border-radius: 50%;
+  animation: bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  animation-delay: -1.0s;
+}
+
+.double-bounce3 {
+  animation-delay: -0.5s;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.container {
+  padding-left: 11%;
+  padding-right: 11%;
+  margin-top: 2%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 10;
+  overflow-y: auto;
+}
+
+#form-property {
+  margin-bottom: 7%;
+}
+
+.header-property {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.close-property {
+  background: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+#grid-select {
+  width: auto;
+  max-width: 500px;
+}
+
+.group-input {
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  background-color: #00000034;
+  display: inline;
+  padding: 3px 7px;
+  border-radius: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 6px 15px;
+  margin-top: 1.33em;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+}
+
+#grid-endereco {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+textarea {
+  resize: vertical;
+  height: 200px;
+  padding-top: 20px;
+  border-radius: 20px;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+button {
+  width: 100px;
+  padding: 10px 10px;
+  border-radius: 30px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.103);
+  color: black;
+  transition: background-color 0.3s ease;
+}
+
+.btn-anexar {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  width: auto;
+  padding: 10px 20px;
+  padding-left: 35px;
+  border-radius: 30px;
+  background-image: url('../imagens/admin/anexo-branco.png');
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 20px;
+}
+
+.btn-anexar:hover {
+  color: rgb(0, 89, 255);
+  border: 1px solid rgb(0, 89, 255);
+  transition: background-color 0.3s ease;
+  background-image: url('../imagens/admin/anexo-azul.png');
+}
+
+.btn-group-right {
+  display: flex;
+  gap: 10px;
+}
+
+button.btn-salvar-form {
+  background-color: black;
+  color: white;
+}
+
+button.btn-salvar-form:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+button.btn-salvar-form:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+.select-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.select-group label {
+  font-size: 15px;
+  text-align: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #999999;
+  margin: 20px 0;
+  width: 100%;
+}
+
+h4 {
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 0.5em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: lighter;
+  unicode-bidi: isolate;
+}
+
+.modal-upload {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  height: 80%;
+  position: relative;
+  left: 10%;
+  top: 5%;
+  overflow-y: auto;
+}
+
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  overflow-x: hidden;
+}
+
+.image-upload {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-upload input[type="file"] {
+  display: none;
+}
+
+.upload-placeholder {
+  width: 120px;
+  height: 120px;
+  border: 2px dashed #cccccc;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+}
+
+.preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  max-width: 100%;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.preview-container .img-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.preview-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.preview-container .remove-image {
+  position: absolute;
+  top: 5px;
+  right: -7px;
+  background: url(../imagens/admin/btnMenos.png) no-repeat center center;
+  background-size: 100% 100%;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+}
+
+.btn-modal {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.modal-upload .button {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+  width: 100px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  margin-right: 10px;
+}
+
+.modal-upload .btn-salvar-imagens {
+  background-color: black;
+  color: white;
+  margin-right: 0;
+  width: 152px;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+.modal-upload .button:hover {
+  background-color: rgba(0, 0, 0, 0.103);
+  color: black;
+  border: 1px solid black;
+  transition: background-color 0.3s ease;
+}
+
+.modal-upload .btn-salvar-imagens:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  transition: background-color 0.3s ease;
+}
+
+.sortable-ghost {
+  opacity: 0.4;
+  background: #ccc;
+}
+
+@media (max-width: 1000px) {
+  .modal-container {
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .group-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #grid-select,
+  #grid-descricao {
+    grid-template-columns: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .btn-group-right {
+    display: grid;
+  }
+
+  .btn-anexar {
+    width: auto;
+    max-width: 120px;
+    height: 90px;
+    background-position: 5px;
+    background-size: 30px;
+    padding: 10px 40px;
+  }
+}
+
+@media (max-width: 460px) {
+  .preview-container {
+    justify-content: center;
+  }
+
+  .preview-container .img-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .modal-container h2 {
+    font-size: 120%;
+  }
+}
+
+@media (max-width: 380px) {
+
+  .preview-container .img-container,
+  .upload-placeholder {
+    width: 200px;
+    height: 200px;
+  }
+}

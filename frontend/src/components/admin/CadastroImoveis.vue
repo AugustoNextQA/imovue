@@ -20,19 +20,23 @@
               <h4>Categoria</h4>
               <div class="select-group">
                 <div>
-                  <input type="radio" id="categoria-casa" name="categoria" value="Casa" v-model="formData.categoria" required>
+                  <input type="radio" id="categoria-casa" name="categoria" value="Casa" v-model="formData.categoria"
+                    required>
                   <label for="categoria-casa">Casa</label>
                 </div>
                 <div>
-                  <input type="radio" id="categoria-apartamento" name="categoria" value="Apartamento" v-model="formData.categoria" required>
+                  <input type="radio" id="categoria-apartamento" name="categoria" value="Apartamento"
+                    v-model="formData.categoria" required>
                   <label for="categoria-apartamento">Apartamento</label>
                 </div>
                 <div>
-                  <input type="radio" id="categoria-lote" name="categoria" value="Lote" v-model="formData.categoria" required>
+                  <input type="radio" id="categoria-lote" name="categoria" value="Lote" v-model="formData.categoria"
+                    required>
                   <label for="categoria-lote">Lote</label>
                 </div>
                 <div>
-                  <input type="radio" id="categoria-kitnet" name="categoria" value="Kitnet" v-model="formData.categoria" required>
+                  <input type="radio" id="categoria-kitnet" name="categoria" value="Kitnet" v-model="formData.categoria"
+                    required>
                   <label for="categoria-kitnet">Kitnet</label>
                 </div>
               </div>
@@ -45,7 +49,8 @@
                   <label for="comercio-venda">Venda</label>
                 </div>
                 <div>
-                  <input type="checkbox" id="comercio-aluguel" name="comercio" value="Aluguel" v-model="formData.comercio">
+                  <input type="checkbox" id="comercio-aluguel" name="comercio" value="Aluguel"
+                    v-model="formData.comercio">
                   <label for="comercio-aluguel">Aluguel</label>
                 </div>
               </div>
@@ -132,5 +137,5 @@ export default {
 </script>
 
 <style scoped>
-@import '@/assets/css/cadastro-imoveis.css';
+@import '@/assets/css/admin/cadastro-imoveis.css';
 </style>

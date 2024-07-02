@@ -4,7 +4,7 @@
       <div class="container">
         <div class="footer-brand">
           <a class="logoFooter">
-            <img src="@/assets/imagens/logo-footer.png" alt="NextQA logo" />
+            <img src="@/assets/imagens/website/logo-footer.png" alt="NextQA logo" />
           </a>
 
           <p class="footer-text">Seu Sonho, Nosso Compromisso!</p>

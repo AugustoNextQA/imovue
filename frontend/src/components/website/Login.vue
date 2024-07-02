@@ -3,7 +3,7 @@
     <header class="header" data-header>
       <div class="container">
         <router-link to="/" class="logo">
-          <img src="@/assets/imagens/logo.png" alt="NextQA logo" />
+          <img src="@/assets/imagens/website/logo.png" alt="NextQA logo" />
         </router-link>
         <button class="menu-toggle-btn" data-nav-toggle-btn></button>
       </div>

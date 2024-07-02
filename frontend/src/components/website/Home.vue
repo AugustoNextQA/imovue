@@ -6,11 +6,13 @@
       <div class="double-bounce3"></div>
     </div>
     <div class="search">
-      <img class="search__img" src="@/assets/imagens/home/fundo.jpg" alt="fundo" />
+      <img class="search__img" src="@/assets/imagens/website/home/fundo.jpg" alt="fundo" />
       <form class="search__form">
         <div class="form__tab_container">
-          <button type="button" id="comprar-select" class="form__tab-button active" @click="toggleTab('comprar')" value="Venda">Comprar</button>
-          <button type="button" id="alugar-select" class="form__tab-button" @click="toggleTab('alugar')" value="Aluguel">Alugar</button>
+          <button type="button" id="comprar-select" class="form__tab-button active" @click="toggleTab('comprar')"
+            value="Venda">Comprar</button>
+          <button type="button" id="alugar-select" class="form__tab-button" @click="toggleTab('alugar')"
+            value="Aluguel">Alugar</button>
         </div>
 
         <div class="form__select" @click="toggleDisplayTiposImoveis">
@@ -26,19 +28,21 @@
         </div>
 
         <div class="input-container">
-          <input type="text" class="form__input" name="cidade" placeholder="Cidade" id="cidade_input" @click="searchCidades" @input="searchCidades" autocomplete="off" />
+          <input type="text" class="form__input" name="cidade" placeholder="Cidade" id="cidade_input"
+            @click="searchCidades" @input="searchCidades" autocomplete="off" />
           <button type="button" class="clear-btn" @click="clearInput('cidade_input')">&times;</button>
           <div id="cidadeSuggestions" class="suggestions"></div>
         </div>
 
         <div class="input-container">
-          <input type="text" class="form__input" name="bairro" placeholder="Bairro" id="bairro_input" @click="searchBairros" @input="searchBairros" autocomplete="off" />
+          <input type="text" class="form__input" name="bairro" placeholder="Bairro" id="bairro_input"
+            @click="searchBairros" @input="searchBairros" autocomplete="off" />
           <button type="button" class="clear-btn" @click="clearInput('bairro_input')">&times;</button>
           <div id="bairroSuggestions" class="suggestions"></div>
         </div>
 
         <button type="button" class="form__submit-btn">
-          <img src="@/assets/imagens/lupa.png" alt="Buscar">
+          <img src="@/assets/imagens/website/lupa.png" alt="Buscar">
         </button>
       </form>
     </div>
@@ -99,12 +103,14 @@
 
           <div class="input-wrapper">
             <label for="assunto">Assunto*</label>
-            <input type="text" name="assunto" id="assunto" required placeholder="Digite o assunto" class="input-field" />
+            <input type="text" name="assunto" id="assunto" required placeholder="Digite o assunto"
+              class="input-field" />
           </div>
 
           <div class="input-wrapper">
             <label for="message">Messagem*</label>
-            <textarea name="message" id="mensagem" required placeholder="Digite sua mensagem" class="input-field"></textarea>
+            <textarea name="message" id="mensagem" required placeholder="Digite sua mensagem"
+              class="input-field"></textarea>
           </div>
 
           <button id="emailButton" type="submit" class="btn btn-primary">
