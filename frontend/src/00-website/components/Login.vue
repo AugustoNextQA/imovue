@@ -28,7 +28,7 @@
         </div>
       </form>
     </section>
-    <Popup ref="popupComponent" />
+    <Popup ref="popup" />
   </div>
 </template>
 
@@ -65,7 +65,7 @@ export default {
         localStorage.setItem('token', data.token);
         localStorage.setItem('nome', data.nome);
 
-        await this.$refs.popupComponent.showAlert('Login bem-sucedido!');
+        await this.$refs.popup.showAlert('Login bem-sucedido!');
         setTimeout(() => {
           this.$router.push('/admin');
         }, 1000);
@@ -78,7 +78,7 @@ export default {
         } else if (error.message.includes('Senha')) {
           idElemento = document.getElementById('error-message-senha-login');
         } else if (error.message.includes('Acesso negado')) {
-          await this.$refs.popupComponent.showAlert('Acesso negado. Apenas administradores podem fazer login.');
+          await this.$refs.popup.showAlert('Acesso negado. Apenas administradores podem fazer login.');
           return;
         }
 
