@@ -1,12 +1,14 @@
 <template>
   <div id="app">
-    <Header />
+    <Header v-if="showHeaderAndFooter" />
     <router-view />
-    <Footer />
+    <Footer v-if="showHeaderAndFooter" />
   </div>
 </template>
 
 <script>
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 
@@ -15,6 +17,11 @@ export default {
   components: {
     Header,
     Footer
+  },
+  setup() {
+    const route = useRoute()
+    const showHeaderAndFooter = computed(() => route.name !== 'Login')
+    return { showHeaderAndFooter }
   }
 }
 </script>

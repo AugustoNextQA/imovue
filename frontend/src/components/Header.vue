@@ -1,7 +1,7 @@
 <template>
   <header class="header" data-header>
     <div class="container-header">
-      <a class="logo">
+      <a href="/" class="logo">
         <img src="@/assets/imagens/logo.png" alt="AGAS Imóveis logo" />
       </a>
 

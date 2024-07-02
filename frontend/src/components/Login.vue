@@ -2,14 +2,14 @@
   <div>
     <header class="header" data-header>
       <div class="container">
-        <a href="/" class="logo">
+        <router-link to="/" class="logo">
           <img src="@/assets/imagens/logo.png" alt="NextQA logo" />
-        </a>
+        </router-link>
         <button class="menu-toggle-btn" data-nav-toggle-btn></button>
       </div>
     </header>
     <section class="loginSection" id="loginSection">
-      <form class="login-form" id="loginForm">
+      <form class="login-form" id="loginForm" @submit.prevent="handleLogin">
         <h2 class="login-title">Iniciar sessão</h2>
         <div class="form-group">
           <label for="username">Nome de usuário</label>
@@ -35,18 +35,20 @@
 <script>
 export default {
   name: 'Login',
+  methods: {
+    handleLogin() {
+      // Implement login logic here
+    },
+    carregarPopup() {
+      // Implement popup logic here
+    }
+  },
   mounted() {
     this.carregarPopup();
-  },
-  methods: {
-    carregarPopup() {
-      // Lógica para carregar popup
-    }
   }
 }
 </script>
 
 <style scoped>
 @import '@/assets/css/login.css';
-@import '@/assets/css/header.css';
 </style>
