@@ -150,5 +150,5 @@ export default {
 </script>
 
 <style scoped>
-@import '@/assets/css/detalhes.css';
+@import '@/assets/css/website/detalhes.css';
 </style>

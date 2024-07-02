@@ -56,5 +56,5 @@ export default {
 </script>
 
 <style scoped>
-@import '@/assets/css/footer.css';
+@import '@/assets/css/website/footer.css';
 </style>

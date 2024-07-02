@@ -63,5 +63,5 @@ export default {
 </script>
 
 <style scoped>
-@import '@/assets/css/contato.css';
+@import '@/assets/css/website/contato.css';
 </style>
