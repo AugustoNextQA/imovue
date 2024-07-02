@@ -43,5 +43,5 @@ export default {
 </script>
 
 <style scoped>
-@import '@/assets/css/admin/visitantes.css';
+@import '@/01-admin/assets/css/visitantes.css';
 </style>

@@ -16,5 +16,5 @@ export default {
 </script>
 
 <style scoped>
-@import '@/assets/css/admin/popup.css';
+@import '@/01-admin/assets/css/popup.css';
 </style>

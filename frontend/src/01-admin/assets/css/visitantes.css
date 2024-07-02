@@ -106,7 +106,7 @@
 }
 
 .icon {
-  background-image: url('../imagens/expandir.png');
+  background-image: url(../imagens/expandir.png);
   background-size: cover;
   width: 16px;
   height: 16px;
@@ -180,7 +180,7 @@
 }
 
 .delete-by-date {
-  background-image: url('../imagens/admin/excluir.png');
+  background-image: url(../imagens/excluir.png);
   background-size: cover;
   padding: 11px;
   cursor: pointer;
@@ -190,7 +190,7 @@
 }
 
 .delete-by-date:hover {
-  background-image: url('../imagens/admin/excluir-vermelho.png');
+  background-image: url(../imagens/excluir-vermelho.png);
 }
 
 .delete-all {

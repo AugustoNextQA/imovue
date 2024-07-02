@@ -202,20 +202,20 @@ button.excluir {
 }
 
 button.editar {
-  background-image: url(../imagens/admin/editar.png);
+  background-image: url(../imagens/editar.png);
 }
 
 button.excluir {
-  background-image: url(../imagens/admin/excluir.png);
+  background-image: url(../imagens/excluir.png);
 }
 
 button.editar:hover {
-  background-image: url(../imagens/admin/editar-hover.png);
+  background-image: url(../imagens/editar-hover.png);
   transition: background-image 0.3s ease;
 }
 
 button.excluir:hover {
-  background-image: url(../imagens/admin/excluir-vermelho.png);
+  background-image: url(../imagens/excluir-vermelho.png);
   transition: background-image 0.3s ease;
 }
 
@@ -266,7 +266,7 @@ input:checked+.slider:before {
 }
 
 .icon {
-  background-image: url('../imagens/expandir.png');
+  background-image: url(../imagens/expandir.png);
   background-size: cover;
   width: 16px;
   height: 16px;

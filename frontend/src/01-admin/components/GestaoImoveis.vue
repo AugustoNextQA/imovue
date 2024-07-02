@@ -126,5 +126,5 @@ export default {
 </script>
 
 <style scoped>
-@import '@/assets/css/admin/gestaoImoveis.css';
+@import '@/01-admin/assets/css/gestaoImoveis.css';
 </style>

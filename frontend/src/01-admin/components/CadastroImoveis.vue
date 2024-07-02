@@ -137,5 +137,5 @@ export default {
 </script>
 
 <style scoped>
-@import '@/assets/css/admin/cadastro-imoveis.css';
+@import '@/01-admin/assets/css/cadastro-imoveis.css';
 </style>
