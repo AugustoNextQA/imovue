@@ -1,7 +1,7 @@
 <template>
   <div>
     <header class="header" data-header>
-      <div class="container">
+      <div class="containerHeader">
         <router-link to="/" class="logo">
           <img src="@/00-website/assets/imagens/logo.png" alt="NextQA logo" />
         </router-link>
