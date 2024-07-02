@@ -9,8 +9,8 @@
 <script>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
+import Header from './components/website/Header.vue'
+import Footer from './components/website/Footer.vue'
 
 export default {
   name: 'App',
