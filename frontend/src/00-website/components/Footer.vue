@@ -11,25 +11,25 @@
 
           <ul class="social-list">
             <li>
-              <a href="mailto:contato@agasimoveis.com.br" class="social-link">
+              <a href="mailto:contato@agasimoveis.com.br" target="_blank" class="social-link">
                 <ion-icon name="mail-outline"></ion-icon>
               </a>
             </li>
 
             <li>
-              <a href="https://www.facebook.com/people/AGAS-Im%C3%B3veis/61560455033326/" class="social-link">
+              <a href="https://www.facebook.com/people/AGAS-Im%C3%B3veis/61560455033326/" target="_blank" class="social-link">
                 <ion-icon name="logo-facebook"></ion-icon>
               </a>
             </li>
 
             <li>
-              <a href="https://www.instagram.com/agasimoveisitapeva/" class="social-link">
+              <a href="https://www.instagram.com/agasimoveisitapeva/" target="_blank" class="social-link">
                 <ion-icon name="logo-instagram"></ion-icon>
               </a>
             </li>
 
             <li>
-              <a href="https://wa.me/551531901451" class="social-link">
+              <a href="https://wa.me/551531901451" target="_blank" class="social-link">
                 <ion-icon name="logo-whatsapp"></ion-icon>
               </a>
             </li>
