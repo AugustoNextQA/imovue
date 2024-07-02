@@ -14,16 +14,8 @@
     <nav class="navbar">
       <ul class="navbar-list">
         <li>
-          <div
-            class="dropdown-header"
-            @click="toggleDropHeader"
-            @mouseover="showDropHeader"
-            @mouseout="hideDropHeader"
-          >
-            <a class="drop-link">
-              Comprar
-              <span class="icon"></span>
-            </a>
+          <div class="dropdown-header">
+            <router-link to="/" class="drop-link">Comprar<span class="icon"></span></router-link>
             <div id="drop-comprar" class="dropdown-header-content">
               <button @click="navBarSearchImoveis('Venda')">Todos imóveis</button>
               <button @click="navBarSearchImoveis('Venda', 'Casa')">Casas</button>
@@ -34,16 +26,8 @@
           </div>
         </li>
         <li>
-          <div
-            class="dropdown-header"
-            @click="toggleDropHeader"
-            @mouseover="showDropHeader"
-            @mouseout="hideDropHeader"
-          >
-            <a class="drop-link">
-              Alugar
-              <span class="icon"></span>
-            </a>
+          <div class="dropdown-header">
+            <router-link to="/" class="drop-link">Alugar<span class="icon"></span></router-link>
             <div id="drop-alugar" class="dropdown-header-content">
               <button @click="navBarSearchImoveis('Aluguel')">Todos imóveis</button>
               <button @click="navBarSearchImoveis('Aluguel', 'Casa')">Casas</button>
@@ -54,16 +38,16 @@
           </div>
         </li>
         <li>
-          <a href="#" class="navbar-link">Cadastre seu imóvel</a>
+          <router-link to="/" class="navbar-link">Cadastre seu imóvel</router-link>
         </li>
         <li>
-          <a href="/contato" class="navbar-link" id="contato-link">Contato</a>
+          <router-link to="/contato" class="navbar-link" id="contato-link">Contato</router-link>
         </li>
       </ul>
 
-      <a href="/login" class="login">
+      <router-link to="/login" class="login">
         <div class="textoLogin">Entrar</div>
-      </a>
+      </router-link>
     </nav>
   </header>
 </template>
@@ -72,15 +56,6 @@
 export default {
   name: 'Header',
   methods: {
-    toggleDropHeader(event) {
-      // Implement your toggle logic here
-    },
-    showDropHeader(event) {
-      // Implement your show logic here
-    },
-    hideDropHeader(event) {
-      // Implement your hide logic here
-    },
     navBarSearchImoveis(tipo, categoria) {
       // Implement your search logic here
     }
