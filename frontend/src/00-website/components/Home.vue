@@ -29,13 +29,6 @@ export default {
     ImoveisCategoria,
     Contact
   },
-  data() {
-    return {
-      cidadeSuggestions: [],
-      bairroSuggestions: [],
-      displayTiposImoveis: false,
-    }
-  },
   methods: {
 
   }
