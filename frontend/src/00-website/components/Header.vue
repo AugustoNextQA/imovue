@@ -5,16 +5,15 @@
         <img src="@/00-website/assets/imagens/logo.png" alt="AGAS Imóveis logo" />
       </a>
 
-      <button class="menu-toggle-btn" data-nav-toggle-btn>
-        <ion-icon name="menu-outline" class="icon-menu"></ion-icon>
-        <ion-icon name="close-outline" class="icon-close"></ion-icon>
+      <button class="menu-toggle-btn" @click="toggleMenu">
+        <ion-icon :name="menuIcon"></ion-icon>
       </button>
     </div>
 
-    <nav class="navbar">
+    <nav class="navbar" :class="{ expanded: isMenuOpen }">
       <ul class="navbar-list">
         <li>
-          <div class="dropdown-header">
+          <div class="dropdown-header" @click="toggleDropHeader" @mouseover="showDropHeader" @mouseout="hideDropHeader">
             <router-link to="/" class="drop-link">Comprar<span class="icon"></span></router-link>
             <div id="drop-comprar" class="dropdown-header-content">
               <button @click="navBarSearchImoveis('Venda')">Todos imóveis</button>
@@ -26,7 +25,7 @@
           </div>
         </li>
         <li>
-          <div class="dropdown-header">
+          <div class="dropdown-header" @click="toggleDropHeader" @mouseover="showDropHeader" @mouseout="hideDropHeader">
             <router-link to="/" class="drop-link">Alugar<span class="icon"></span></router-link>
             <div id="drop-alugar" class="dropdown-header-content">
               <button @click="navBarSearchImoveis('Aluguel')">Todos imóveis</button>
@@ -55,7 +54,44 @@
 <script>
 export default {
   name: 'Header',
+  data() {
+    return {
+      isMenuOpen: false,
+      menuIcon: 'menu-outline'
+    };
+  },
   methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
+      this.menuIcon = this.isMenuOpen ? 'close-outline' : 'menu-outline';
+    },
+
+    toggleDropHeader(event) {
+      if (window.innerWidth <= 900) {
+        const dropdownHeader = event.currentTarget;
+        const dropdownContent = dropdownHeader.querySelector('.dropdown-header-content');
+        dropdownContent.classList.toggle('show');
+      }
+    },
+
+    showDropHeader(event) {
+      if (window.innerWidth > 900) {
+        const dropdownHeader = event.currentTarget;
+        const dropdownContent = dropdownHeader.querySelector('.dropdown-header-content');
+        clearTimeout(dropdownContent.getAttribute("data-timer"));
+        dropdownContent.classList.add("show");
+      }
+    },
+
+    hideDropHeader(event) {
+      const dropdownHeader = event.currentTarget;
+      const dropdownContent = dropdownHeader.querySelector('.dropdown-header-content');
+      const timer = setTimeout(function () {
+        dropdownContent.classList.remove("show");
+      }, 100);
+      dropdownContent.setAttribute("data-timer", timer);
+    },
+
     navBarSearchImoveis(tipo, categoria) {
       // Implement your search logic here
     }
