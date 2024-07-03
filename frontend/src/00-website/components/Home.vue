@@ -18,7 +18,7 @@
         <div class="form__select" @click="toggleDisplayTiposImoveis">
           <span id="selected-imovel" value="">Todos imóveis</span><span class="icon"></span>
 
-          <ul id="drop-imovel" class="suggestions">
+          <ul id="drop-imovel" class="suggestions" :class="{ show: displayTiposImoveis }">
             <li class="selectable-option" @click="selectImovel('Todos imóveis')">Todos imóveis</li>
             <li class="selectable-option" @click="selectImovel('Casa')">Casa</li>
             <li class="selectable-option" @click="selectImovel('Apartamento')">Apartamento</li>
@@ -31,14 +31,22 @@
           <input type="text" class="form__input" name="cidade" placeholder="Cidade" id="cidade_input"
             @click="searchCidades" @input="searchCidades" autocomplete="off" />
           <button type="button" class="clear-btn" @click="clearInput('cidade_input')">&times;</button>
-          <div id="cidadeSuggestions" class="suggestions"></div>
+          <div id="cidadeSuggestions" class="suggestions" :class="{ show: cidadeSuggestions.length > 0 }">
+            <div v-for="cidade in cidadeSuggestions" :key="cidade" class="selectable-option"
+              @click="selectSuggestionHome(cidade, 'cidade_input')">{{ cidade }}</div>
+            <div v-if="cidadeSuggestions.length === 0">Nenhuma cidade encontrada</div>
+          </div>
         </div>
 
         <div class="input-container">
           <input type="text" class="form__input" name="bairro" placeholder="Bairro" id="bairro_input"
             @click="searchBairros" @input="searchBairros" autocomplete="off" />
           <button type="button" class="clear-btn" @click="clearInput('bairro_input')">&times;</button>
-          <div id="bairroSuggestions" class="suggestions"></div>
+          <div id="bairroSuggestions" class="suggestions" :class="{ show: bairroSuggestions.length > 0 }">
+            <div v-for="bairro in bairroSuggestions" :key="bairro" class="selectable-option"
+              @click="selectSuggestionHome(bairro, 'bairro_input')">{{ bairro }}</div>
+            <div v-if="bairroSuggestions.length === 0">Nenhum bairro encontrado</div>
+          </div>
         </div>
 
         <button type="button" class="form__submit-btn">
@@ -126,30 +134,166 @@
 <script>
 export default {
   name: 'Home',
+  data() {
+    return {
+      cidadeSuggestions: [],
+      bairroSuggestions: [],
+      displayTiposImoveis: false,
+    }
+  },
   methods: {
     toggleTab(tab) {
-      // Implement your toggle tab logic here
+      const alugarBtn = document.getElementById('alugar-select');
+      const comprarBtn = document.getElementById('comprar-select');
+
+      if (tab === 'alugar') {
+        alugarBtn.classList.add('active');
+        comprarBtn.classList.remove('active');
+      } else {
+        alugarBtn.classList.remove('active');
+        comprarBtn.classList.add('active');
+      }
     },
+
     toggleDisplayTiposImoveis() {
-      // Implement your toggle display logic here
+      this.displayTiposImoveis = !this.displayTiposImoveis;
     },
+
     selectImovel(imovel) {
-      // Implement your select imovel logic here
+      const selected = document.getElementById('selected-imovel');
+      if (imovel === 'Todos imóveis') {
+        selected.setAttribute('value', '');
+      } else {
+        selected.setAttribute('value', imovel);
+      }
+      selected.textContent = imovel;
     },
-    searchCidades() {
-      // Implement your search cidades logic here
+
+    async searchCidades(event) {
+      const input = event.target;
+      try {
+        const response = await fetch(`${process.env.VUE_APP_BACKEND_URL}/cidades`, {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+        if (!response.ok) {
+          throw new Error('Erro ao buscar cidades da API');
+        }
+        const data = await response.json();
+
+        console.log('Dados recebidos da API:', data);
+
+        if (!Array.isArray(data.cidades)) {
+          throw new Error('Dados recebidos não são uma lista de cidades');
+        }
+
+        await this.displayCidadesResults(data.cidades, input.value);
+        this.handleInput(input)
+
+      } catch (error) {
+        console.error('Erro ao buscar cidades:', error);
+        await this.displayCidadesResults([], input.value);
+      }
     },
-    searchBairros() {
-      // Implement your search bairros logic here
+
+    async displayCidadesResults(results, query) {
+      this.cidadeSuggestions = [];
+
+      if (results.length === 0) {
+        this.cidadeSuggestions.push('Nenhuma cidade encontrada');
+        return;
+      }
+
+      const normalizedQuery = this.removeAccents(query.toLowerCase());
+
+      const filteredResults = results.filter(cidade => {
+        return this.removeAccents(cidade.toLowerCase()).includes(normalizedQuery);
+      });
+
+      this.cidadeSuggestions = filteredResults;
     },
+
+    async searchBairros(event) {
+      const input = event.target;
+      const cidade = document.getElementById('cidade_input').value;
+      try {
+        const response = await fetch(`${process.env.VUE_APP_BACKEND_URL}/bairros?cidade=${encodeURIComponent(cidade)}`, {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+        if (!response.ok) {
+          throw new Error('Erro ao buscar bairros da API');
+        }
+        const data = await response.json();
+
+        console.log('Dados recebidos da API:', data);
+
+        if (!Array.isArray(data.bairros)) {
+          throw new Error('Dados recebidos não são uma lista de bairros');
+        }
+
+        await this.displayBairrosResults(data.bairros, input.value);
+        this.handleInput(input)
+
+      } catch (error) {
+        console.error('Erro ao buscar bairros:', error);
+        await this.displayBairrosResults([], input.value);
+      }
+    },
+
+    async displayBairrosResults(results, query) {
+      this.bairroSuggestions = [];
+
+      if (results.length === 0) {
+        this.bairroSuggestions.push('Nenhum bairro encontrado');
+        return;
+      }
+
+      const normalizedQuery = this.removeAccents(query.toLowerCase());
+
+      const filteredResults = results.filter(bairro => {
+        return this.removeAccents(bairro.toLowerCase()).includes(normalizedQuery);
+      });
+
+      this.bairroSuggestions = filteredResults;
+    },
+
+    handleInput(input) {
+      const clearBtn = input.nextElementSibling;
+      clearBtn.style.display = 'block';
+    },
+
     clearInput(inputId) {
-      document.getElementById(inputId).value = '';
+      this.closeSuggestionHome();
+      const input = document.getElementById(inputId);
+      input.value = '';
+      const clearBtn = input.nextElementSibling;
+      clearBtn.style.display = 'none';
+      input.focus();
     },
+
+    async selectSuggestionHome(suggestion, id_input) {
+      document.getElementById(id_input).value = suggestion;
+      this.closeSuggestionHome();
+    },
+
+    closeSuggestionHome() {
+      this.cidadeSuggestions = [];
+      this.bairroSuggestions = [];
+    },
+
     carregarImoveisPorCategoria(categoria) {
       // Implement your carregar imoveis logic here
     },
+
     verTodosImoveis() {
       // Implement your ver todos imoveis logic here
+    },
+
+    removeAccents(str) {
+      return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     }
   }
 }
