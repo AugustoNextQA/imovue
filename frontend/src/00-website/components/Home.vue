@@ -1,9 +1,9 @@
 <template>
-  <section class="home" id="home">
-    <div id="spinner" class="spinner" style="display: none;">
-      <div class="double-bounce1"></div>
-      <div class="double-bounce2"></div>
-      <div class="double-bounce3"></div>
+  <section class="home-section">
+    <div id="spinner" class="spinner-home" style="display: none;">
+      <div class="double-bounce1-home"></div>
+      <div class="double-bounce2-home"></div>
+      <div class="double-bounce3-home"></div>
     </div>
     <Search />
     <ImoveisDestaque />

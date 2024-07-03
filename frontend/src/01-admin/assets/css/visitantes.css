@@ -1,4 +1,4 @@
-.spinner {
+.visitantes-component .spinner {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -11,9 +11,9 @@
   align-items: center;
 }
 
-.double-bounce1,
-.double-bounce2,
-.double-bounce3 {
+.visitantes-component .double-bounce1,
+.visitantes-component .double-bounce2,
+.visitantes-component .double-bounce3 {
   width: 10px;
   height: 10px;
   background-color: #333;
@@ -21,11 +21,11 @@
   animation: bounce 2.0s infinite ease-in-out;
 }
 
-.double-bounce2 {
+.visitantes-component .double-bounce2 {
   animation-delay: -1.0s;
 }
 
-.double-bounce3 {
+.visitantes-component .double-bounce3 {
   animation-delay: -0.5s;
 }
 
@@ -41,14 +41,14 @@
   }
 }
 
-.container {
+.visitantes-component .container {
   margin: 0 auto;
   width: 80%;
   margin-top: 1%;
   margin-bottom: 100px;
 }
 
-.header {
+.visitantes-component .header {
   min-height: 70px;
   display: flex;
   align-items: center;
@@ -56,38 +56,38 @@
   margin: auto 12px;
 }
 
-.header span {
+.visitantes-component .header span {
   font-weight: 900;
   font-size: 20px;
   word-break: break-all;
 }
 
-.close-property {
+.visitantes-component .close-property {
   background: none;
   font-size: 25px;
   cursor: pointer;
 }
 
-.visit-dates {
+.visitantes-component .visit-dates {
   margin-top: 20px;
   position: relative;
 }
 
-.visit-date {
+.visitantes-component .visit-date {
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   overflow: hidden;
 }
 
-.header-container {
+.visitantes-component .header-container {
   display: flex;
   justify-content: space-between;
   background-color: #f0f0f0;
   padding: 12px;
 }
 
-.date-header {
+.visitantes-component .date-header {
   position: relative;
   display: flex;
   background: none;
@@ -100,12 +100,12 @@
   cursor: pointer;
 }
 
-.header-container:hover {
+.visitantes-component .header-container:hover {
   background-color: #e0e0e0;
   transition: background-color 0.5s ease;
 }
 
-.icon {
+.visitantes-component .icon {
   background-image: url(../imagens/expandir.png);
   background-size: cover;
   width: 16px;
@@ -114,72 +114,72 @@
   transition: transform 0.3s ease;
 }
 
-.rotate {
+.visitantes-component .rotate {
   transform: rotate(180deg);
 }
 
-.today-label {
+.visitantes-component .today-label {
   font-weight: normal;
   font-size: 14px;
   margin-left: 5px;
 }
 
-.total-visits {
+.visitantes-component .total-visits {
   margin-top: 10px;
 }
 
-.visit-count {
+.visitantes-component .visit-count {
   font-weight: normal;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.600);
   margin-left: 8px;
 }
 
-.collapsed .visits-table {
+.visitantes-component .collapsed .visits-table {
   display: none;
 }
 
-.visits-table {
+.visitantes-component .visits-table {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
 }
 
-.visits-table thead {
+.visitantes-component .visits-table thead {
   background-color: #f0f0f0;
 }
 
-.visits-table th,
-.visits-table td {
+.visitantes-component .visits-table th,
+.visitantes-component .visits-table td {
   padding: 10px;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
 
-.visits-table th {
+.visitantes-component .visits-table th {
   width: 25%;
 }
 
-.visits-table td {
+.visitantes-component .visits-table td {
   color: rgba(0, 0, 0, 0.600)
 }
 
-.visits-table tbody tr:nth-child(even) {
+.visitantes-component .visits-table tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-.visits-table tbody tr:hover {
+.visitantes-component .visits-table tbody tr:hover {
   background-color: #f0f0f0;
 }
 
-.actions {
+.visitantes-component .actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 70px;
 }
 
-.delete-by-date {
+.visitantes-component .delete-by-date {
   background-image: url(../imagens/excluir.png);
   background-size: cover;
   padding: 11px;
@@ -189,11 +189,11 @@
   position: relative;
 }
 
-.delete-by-date:hover {
+.visitantes-component .delete-by-date:hover {
   background-image: url(../imagens/excluir-vermelho.png);
 }
 
-.delete-all {
+.visitantes-component .delete-all {
   padding: 8px 16px;
   border-radius: 30px;
   color: white;
@@ -201,14 +201,14 @@
   cursor: pointer;
 }
 
-.delete-all:hover {
+.visitantes-component .delete-all:hover {
   background-color: #d10000;
   color: white;
   transition: 0.3s ease;
   border: 1px solid d10000;
 }
 
-.voltar {
+.visitantes-component .voltar {
   font-size: 16px;
   padding: 8px 16px;
   border-radius: 30px;
@@ -218,17 +218,17 @@
   border: 1px solid black;
 }
 
-.voltar:hover {
+.visitantes-component .voltar:hover {
   background-color: rgba(0, 0, 0, 0.100);
   transition: background-color 0.3s ease;
 }
 
 @media (max-width: 700px) {
-  body {
+  .visitantes-component body {
     font-size: 14px;
   }
 
-  .header span {
+  .visitantes-component .header span {
     font-size: 18px;
   }
 }

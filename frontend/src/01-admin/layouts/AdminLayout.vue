@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="admin-layout">
     <header>
       <div class="header-left">
         <img src="@/01-admin/assets/imagens/menu/menuFechado.png" alt="Menu" id="menu-icon" class="menu-icon">

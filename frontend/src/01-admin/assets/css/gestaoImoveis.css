@@ -1,4 +1,4 @@
-.spinner {
+.gestao-imoveis-component .spinner {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -11,9 +11,9 @@
   align-items: center;
 }
 
-.double-bounce1,
-.double-bounce2,
-.double-bounce3 {
+.gestao-imoveis-component .double-bounce1,
+.gestao-imoveis-component .double-bounce2,
+.gestao-imoveis-component .double-bounce3 {
   width: 10px;
   height: 10px;
   background-color: #333;
@@ -21,11 +21,11 @@
   animation: bounce 2.0s infinite ease-in-out;
 }
 
-.double-bounce2 {
+.gestao-imoveis-component .double-bounce2 {
   animation-delay: -1.0s;
 }
 
-.double-bounce3 {
+.gestao-imoveis-component .double-bounce3 {
   animation-delay: -0.5s;
 }
 
@@ -41,31 +41,31 @@
   }
 }
 
-.container {
+.gestao-imoveis-component .container {
   margin: 0 auto;
   width: 80%;
   margin-top: 1%;
 }
 
-.header {
+.gestao-imoveis-component .header {
   min-height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.header span {
+.gestao-imoveis-component .header span {
   font-weight: 900;
   font-size: 20px;
   word-break: break-all;
 }
 
-.button-header {
+.gestao-imoveis-component .button-header {
   display: flex;
   gap: 50px;
 }
 
-#visitasBtn {
+.gestao-imoveis-component #visitasBtn {
   font-size: 16px;
   padding: 8px 16px;
   border-radius: 30px;
@@ -75,12 +75,12 @@
   border: 1px solid black;
 }
 
-#visitasBtn:hover {
+.gestao-imoveis-component #visitasBtn:hover {
   background-color: rgba(0, 0, 0, 0.100);
   transition: background-color 0.3s ease;
 }
 
-#new {
+.gestao-imoveis-component #new {
   font-size: 16px;
   padding: 8px 16px;
   border-radius: 30px;
@@ -90,104 +90,104 @@
   cursor: pointer;
 }
 
-#new:hover {
+.gestao-imoveis-component #new:hover {
   background-color: white;
   color: black;
   border: 1px solid black;
   transition: background-color 0.3s ease;
 }
 
-.divTable {
+.gestao-imoveis-component .divTable {
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   overflow: hidden;
 }
 
-.divTable::-webkit-scrollbar {
+.gestao-imoveis-component .divTable::-webkit-scrollbar {
   width: 12px;
   background-color: whitesmoke;
 }
 
-.divTable::-webkit-scrollbar-thumb {
+.gestao-imoveis-component .divTable::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: darkgray;
 }
 
-table {
+.gestao-imoveis-component table {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
 }
 
-thead {
+.gestao-imoveis-component thead {
   background-color: #f0f0f0;
 }
 
-tr {
+.gestao-imoveis-component tr {
   border-bottom: 1px solid #ccc;
 }
 
-tbody tr td {
+.gestao-imoveis-component tbody tr td {
   vertical-align: middle;
   padding: 7px;
 }
 
-thead tr th {
+.gestao-imoveis-component thead tr th {
   text-align: start;
 }
 
-tbody tr:nth-child(even) {
+.gestao-imoveis-component tbody tr:nth-child(even) {
   background-color: #f1f1f1;
 }
 
-tbody tr:hover {
+.gestao-imoveis-component tbody tr:hover {
   background-color: #ebebeb;
 }
 
-.id_imovel,
-.categoria,
-.endereco,
-.valor {
+.gestao-imoveis-component .id_imovel,
+.gestao-imoveis-component .categoria,
+.gestao-imoveis-component .endereco,
+.gestao-imoveis-component .valor {
   display: flex;
   padding: 10px;
 }
 
-th>div.id_imovel:hover,
-th>div.categoria:hover,
-th>div.endereco:hover,
-th>div.valor:hover {
+.gestao-imoveis-component th>div.id_imovel:hover,
+.gestao-imoveis-component th>div.categoria:hover,
+.gestao-imoveis-component th>div.endereco:hover,
+.gestao-imoveis-component th>div.valor:hover {
   display: flex;
   cursor: pointer;
   background-color: #d4d4d4;
 }
 
-th:nth-child(3) {
+.gestao-imoveis-component th:nth-child(3) {
   width: 500px;
 }
 
-thead tr th.publicar,
-thead tr th.destaque,
-thead tr th.acao {
+.gestao-imoveis-component thead tr th.publicar,
+.gestao-imoveis-component thead tr th.destaque,
+.gestao-imoveis-component thead tr th.acao {
   text-align: center;
   width: 130px;
 }
 
-tbody tr td.visibilidadeCell,
-tbody tr td.destaqueCell,
-tbody tr td.acao {
+.gestao-imoveis-component tbody tr td.visibilidadeCell,
+.gestao-imoveis-component tbody tr td.destaqueCell,
+.gestao-imoveis-component tbody tr td.acao {
   justify-content: center;
   align-items: center;
   gap: 15px;
   text-align: center;
 }
 
-tbody tr td.acao {
+.gestao-imoveis-component tbody tr td.acao {
   display: flex;
 }
 
-button.editar,
-button.excluir {
+.gestao-imoveis-component button.editar,
+.gestao-imoveis-component button.excluir {
   background-size: cover;
   cursor: pointer;
   border: none;
@@ -201,25 +201,25 @@ button.excluir {
   height: 22px;
 }
 
-button.editar {
+.gestao-imoveis-component button.editar {
   background-image: url(../imagens/editar.png);
 }
 
-button.excluir {
+.gestao-imoveis-component button.excluir {
   background-image: url(../imagens/excluir.png);
 }
 
-button.editar:hover {
+.gestao-imoveis-component button.editar:hover {
   background-image: url(../imagens/editar-hover.png);
   transition: background-image 0.3s ease;
 }
 
-button.excluir:hover {
+.gestao-imoveis-component button.excluir:hover {
   background-image: url(../imagens/excluir-vermelho.png);
   transition: background-image 0.3s ease;
 }
 
-.switch {
+.gestao-imoveis-component .switch {
   position: relative;
   display: inline-block;
   width: 40px;
@@ -227,13 +227,13 @@ button.excluir:hover {
   vertical-align: middle;
 }
 
-.switch input {
+.gestao-imoveis-component .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-.slider {
+.gestao-imoveis-component .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -245,7 +245,7 @@ button.excluir:hover {
   border-radius: 20px;
 }
 
-.slider:before {
+.gestao-imoveis-component .slider:before {
   position: absolute;
   content: "";
   height: 16px;
@@ -257,15 +257,15 @@ button.excluir:hover {
   border-radius: 50%;
 }
 
-input:checked+.slider {
+.gestao-imoveis-component input:checked+.slider {
   background-color: #000;
 }
 
-input:checked+.slider:before {
+.gestao-imoveis-component input:checked+.slider:before {
   transform: translateX(20px);
 }
 
-.icon {
+.gestao-imoveis-component .icon {
   background-image: url(../imagens/expandir.png);
   background-size: cover;
   width: 16px;
@@ -275,12 +275,12 @@ input:checked+.slider:before {
   transition: transform 0.3s ease;
 }
 
-.rotate {
+.gestao-imoveis-component .rotate {
   transform: rotate(180deg);
 }
 
 /* Paginação */
-.pagination {
+.gestao-imoveis-component .pagination {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -288,18 +288,18 @@ input:checked+.slider:before {
   margin-bottom: 30px;
 }
 
-.pagination .custom-select {
+.gestao-imoveis-component .pagination .custom-select {
   margin-right: 10px;
   position: relative;
 }
 
-.btn-pagination {
+.gestao-imoveis-component .btn-pagination {
   display: flex;
   align-items: center;
   margin-left: 12px;
 }
 
-.btn-pagination .btn-navigation {
+.gestao-imoveis-component .btn-pagination .btn-navigation {
   background-color: black;
   color: white;
   padding-bottom: 2px;
@@ -314,17 +314,17 @@ input:checked+.slider:before {
   font-size: 20px;
 }
 
-.btn-pagination .btn-navigation:disabled {
+.gestao-imoveis-component .btn-pagination .btn-navigation:disabled {
   opacity: 0.2;
   cursor: not-allowed;
 }
 
-.btn-pagination .btn-navigation:hover {
+.gestao-imoveis-component .btn-pagination .btn-navigation:hover {
   background-color: rgba(0, 0, 0, 0.850);
   transition: background-color 0.5s ease;
 }
 
-.page-number {
+.gestao-imoveis-component .page-number {
   background-color: #fff;
   border: 1px solid #000000;
   border-radius: 30px;
@@ -336,17 +336,17 @@ input:checked+.slider:before {
   background-size: 15px 15px;
 }
 
-.page-number:hover {
+.gestao-imoveis-component .page-number:hover {
   background-color: rgba(0, 0, 0, 0.150);
   transition: background-color 0.5s ease;
 }
 
-#currentPageIndicator {
+.gestao-imoveis-component #currentPageIndicator {
   padding: 15px;
   font-size: 16px;
 }
 
-.paginationDropdown-content {
+.gestao-imoveis-component .paginationDropdown-content {
   display: none;
   position: absolute;
   background-color: white;
@@ -356,31 +356,31 @@ input:checked+.slider:before {
   margin-bottom: 500px;
 }
 
-.paginationDropdown-content button {
+.gestao-imoveis-component .paginationDropdown-content button {
   width: 100%;
   padding: 10px;
   text-align: left;
   cursor: pointer;
 }
 
-.paginationDropdown-content button:hover {
+.gestao-imoveis-component .paginationDropdown-content button:hover {
   background-color: rgba(0, 0, 0, 0.10);
   transition: background-color 0.2s ease;
 }
 
-.show {
+.gestao-imoveis-component .show {
   display: block;
 }
 
 /* Barra de Pesquisa */
-.search-container {
+.gestao-imoveis-component .search-container {
   display: flex;
   align-items: center;
   width: 50%;
   position: relative;
 }
 
-.header-search {
+.gestao-imoveis-component .header-search {
   position: relative;
   display: flex;
   align-items: center;
@@ -389,7 +389,7 @@ input:checked+.slider:before {
   justify-content: space-between;
 }
 
-.search-results {
+.gestao-imoveis-component .search-results {
   position: absolute;
   background-color: white;
   top: calc(98%);
@@ -402,16 +402,16 @@ input:checked+.slider:before {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.search-results div {
+.gestao-imoveis-component .search-results div {
   padding: 10px;
   cursor: pointer;
 }
 
-.search-results .selectable-option:hover {
+.gestao-imoveis-component .search-results .selectable-option:hover {
   background-color: #f1f1f1;
 }
 
-.search-results strong {
+.gestao-imoveis-component .search-results strong {
   display: block;
   padding: 10px 10px 10px 5px;
   border-bottom: 1px solid #ddd;
@@ -419,7 +419,7 @@ input:checked+.slider:before {
   cursor: default;
 }
 
-.search-bar {
+.gestao-imoveis-component .search-bar {
   width: 100%;
   padding: 10px;
   background: none;
@@ -433,11 +433,11 @@ input:checked+.slider:before {
   outline: none;
 }
 
-.search-bar:focus {
+.gestao-imoveis-component .search-bar:focus {
   border-color: #000;
 }
 
-.search-button {
+.gestao-imoveis-component .search-button {
   width: 40px;
   height: 38px;
   background-color: #000;
@@ -453,17 +453,17 @@ input:checked+.slider:before {
   outline: none;
 }
 
-.search-button:hover {
+.gestao-imoveis-component .search-button:hover {
   background-color: rgba(0, 0, 0, 0.850);
   transition: background-color 0.5s ease;
 }
 
-.search-button img {
+.gestao-imoveis-component .search-button img {
   width: 16px;
   height: 16px;
 }
 
-.clear-button-container {
+.gestao-imoveis-component .clear-button-container {
   width: 40px;
   height: 38px;
   border: none;
@@ -476,37 +476,37 @@ input:checked+.slider:before {
   font-size: 30px;
 }
 
-.clear-button-container:hover {
+.gestao-imoveis-component .clear-button-container:hover {
   background-color: #00000018;
 }
 
-.clear-button {
+.gestao-imoveis-component .clear-button {
   border: none;
   background: none;
   color: black;
   margin-bottom: 5px;
 }
 
-.selected-results button {
+.gestao-imoveis-component .selected-results button {
   float: right;
   margin-top: -30px;
 }
 
 @media (max-width: 700px) {
-  body {
+  .gestao-imoveis-component body {
     font-size: 10px;
   }
 
-  .header span {
+  .gestao-imoveis-component .header span {
     font-size: 15px;
   }
 
-  #new {
+  .gestao-imoveis-component #new {
     padding: 5px 10px;
     font-size: 10px;
   }
 
-  thead tr th.acao {
+  .gestao-imoveis-component thead tr th.acao {
     width: auto !important;
   }
 }

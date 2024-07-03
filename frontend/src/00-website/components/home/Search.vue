@@ -1,47 +1,47 @@
 <template>
-  <section class="search">
-    <img class="search__img" src="@/00-website/assets/imagens/home/fundo.jpg" alt="fundo" />
-    <form class="search__form">
-      <div class="form__tab_container">
-        <button type="button" id="comprar-select" class="form__tab-button active" @click="toggleTab('comprar')"
+  <section class="search-home">
+    <img class="search__img-home" src="@/00-website/assets/imagens/home/fundo.jpg" alt="fundo" />
+    <form class="search__form-home">
+      <div class="form__tab_container-home">
+        <button type="button" id="comprar-select" class="form__tab-button-home active" @click="toggleTab('comprar')"
           value="Venda">Comprar</button>
-        <button type="button" id="alugar-select" class="form__tab-button" @click="toggleTab('alugar')"
+        <button type="button" id="alugar-select" class="form__tab-button-home" @click="toggleTab('alugar')"
           value="Aluguel">Alugar</button>
       </div>
 
-      <div class="form__select" @click="toggleDisplayTiposImoveis">
-        <span id="selected-imovel" value="">Todos imóveis</span><span class="icon"></span>
+      <div class="form__select-home" @click="toggleDisplayTiposImoveis">
+        <span id="selected-imovel" value="">Todos imóveis</span><span class="icon-home"></span>
 
-        <ul id="drop-imovel" class="suggestions" :class="{ show: displayTiposImoveis }">
-          <li class="selectable-option" @click="selectImovel('Todos imóveis')">Todos imóveis</li>
-          <li class="selectable-option" @click="selectImovel('Casa')">Casa</li>
-          <li class="selectable-option" @click="selectImovel('Apartamento')">Apartamento</li>
-          <li class="selectable-option" @click="selectImovel('Kitnet')">Kitnet</li>
-          <li class="selectable-option" @click="selectImovel('Lote')">Lote</li>
+        <ul id="drop-imovel-home" class="suggestions-home" :class="{ show: displayTiposImoveis }">
+          <li class="selectable-option-home" @click="selectImovel('Todos imóveis')">Todos imóveis</li>
+          <li class="selectable-option-home" @click="selectImovel('Casa')">Casa</li>
+          <li class="selectable-option-home" @click="selectImovel('Apartamento')">Apartamento</li>
+          <li class="selectable-option-home" @click="selectImovel('Kitnet')">Kitnet</li>
+          <li class="selectable-option-home" @click="selectImovel('Lote')">Lote</li>
         </ul>
       </div>
 
-      <div class="input-container">
-        <input type="text" class="form__input" name="cidade" placeholder="Cidade" id="cidade_input"
+      <div class="input-container-home">
+        <input type="text" class="form__input-home" name="cidade" placeholder="Cidade" id="cidade_input"
           @click="searchCidades" @input="searchCidades" autocomplete="off" />
-        <button type="button" class="clear-btn" @click="clearInput('cidade_input')">&times;</button>
-        <div id="cidadeSuggestions" class="suggestions" :class="{ show: cidadeSuggestions.length > 0 }">
-          <div v-for="cidade in cidadeSuggestions" :key="cidade" class="selectable-option"
+        <button type="button" class="clear-btn-home" @click="clearInput('cidade_input')">&times;</button>
+        <div id="cidadeSuggestions-home" class="suggestions-home" :class="{ show: cidadeSuggestions.length > 0 }">
+          <div v-for="cidade in cidadeSuggestions" :key="cidade" class="selectable-option-home"
             @click="selectSuggestionHome(cidade, 'cidade_input')">{{ cidade }}</div>
         </div>
       </div>
 
-      <div class="input-container">
-        <input type="text" class="form__input" name="bairro" placeholder="Bairro" id="bairro_input"
+      <div class="input-container-home">
+        <input type="text" class="form__input-home" name="bairro" placeholder="Bairro" id="bairro_input"
           @click="searchBairros" @input="searchBairros" autocomplete="off" />
-        <button type="button" class="clear-btn" @click="clearInput('bairro_input')">&times;</button>
-        <div id="bairroSuggestions" class="suggestions" :class="{ show: bairroSuggestions.length > 0 }">
-          <div v-for="bairro in bairroSuggestions" :key="bairro" class="selectable-option"
+        <button type="button" class="clear-btn-home" @click="clearInput('bairro_input')">&times;</button>
+        <div id="bairroSuggestions-home" class="suggestions-home" :class="{ show: bairroSuggestions.length > 0 }">
+          <div v-for="bairro in bairroSuggestions" :key="bairro" class="selectable-option-home"
             @click="selectSuggestionHome(bairro, 'bairro_input')">{{ bairro }}</div>
         </div>
       </div>
 
-      <button type="button" class="form__submit-btn">
+      <button type="button" class="form__submit-btn-home">
         <img src="@/00-website/assets/imagens/lupa.png" alt="Buscar">
       </button>
     </form>

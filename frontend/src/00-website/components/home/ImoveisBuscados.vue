@@ -1,9 +1,9 @@
 <template>
-  <section class="mais-acessados">
+  <section class="mais-acessados-home">
     <h2>Imóveis mais buscados</h2>
-    <div class="cards-container">
+    <div class="cards-container-home">
       <button class="nav acessadosPrev">❮</button>
-      <div id="acessadosContainer" class="cards"></div>
+      <div id="acessadosContainer" class="cards-home"></div>
       <button class="nav acessadosNext">❯</button>
     </div>
   </section>

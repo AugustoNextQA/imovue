@@ -1,9 +1,9 @@
 <template>
-  <section class="destaques">
+  <section class="destaques-home">
     <h2>Imóveis em destaque</h2>
-    <div class="cards-container">
+    <div class="cards-container-home">
       <button class="nav destaquesPrev">❮</button>
-      <div id="destaqueContainer" class="cards"></div>
+      <div id="destaqueContainer" class="cards-home"></div>
       <button class="nav destaquesNext">❯</button>
     </div>
   </section>
