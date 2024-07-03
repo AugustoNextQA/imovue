@@ -20,12 +20,14 @@
 
           <div class="input-wrapper">
             <label for="assunto">Assunto*</label>
-            <input type="text" name="assunto" id="assunto" required placeholder="Digite o assunto" class="input-field" />
+            <input type="text" name="assunto" id="assunto" required placeholder="Digite o assunto"
+              class="input-field" />
           </div>
 
           <div class="input-wrapper">
             <label for="message">Mensagem*</label>
-            <textarea name="message" id="mensagem" required placeholder="Digite sua mensagem" class="input-field"></textarea>
+            <textarea name="message" id="mensagem" required placeholder="Digite sua mensagem"
+              class="input-field"></textarea>
           </div>
 
           <button id="emailButton" type="submit" class="btn btn-primary">
@@ -35,7 +37,7 @@
         </form>
       </div>
 
-      <div class="contact-info">
+      <div v-if="showContactInfo" class="contact-info">
         <h2>Informações de Contato</h2>
         <div class="social-media">
           <a href="mailto:contato@agasimoveis.com.br" target="_blank">
@@ -58,7 +60,13 @@
 
 <script>
 export default {
-  name: 'Contact'
+  name: 'Contact',
+  props: {
+    showContactInfo: {
+      type: Boolean,
+      default: true
+    }
+  }
 }
 </script>
 

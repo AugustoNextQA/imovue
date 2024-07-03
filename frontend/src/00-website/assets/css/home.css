@@ -55,6 +55,7 @@
 .search {
     display: flex;
     justify-content: center;
+    padding-bottom: 70px;
     height: 750px;
     background-color: #f2f2f2;
 }
