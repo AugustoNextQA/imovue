@@ -59,7 +59,7 @@ export default {
         if (!response.ok) throw new Error('Erro ao buscar imóveis da API');
         const data = await response.json();
         const imoveisDestaque = await Promise.all(
-          data.imoveis.filter(imovel => imovel.destaque).map(async imovel => {
+          data.imoveis.filter(imovel => imovel.destaque === true).map(async imovel => {
 
             try {
               const responseImagens = await fetch(`${process.env.VUE_APP_BACKEND_URL}/imoveis/imagem/${imovel.id_imovel}`, {
