@@ -44,7 +44,7 @@
         </li>
       </ul>
 
-      <router-link to="/login" class="login">
+      <router-link to="/admin" class="login">
         <div class="textoLogin">Entrar</div>
       </router-link>
     </nav>

@@ -65,9 +65,9 @@ export default {
         localStorage.setItem('token', data.token);
         localStorage.setItem('nome', data.nome);
 
-        await this.$refs.popup.showAlert('Login bem-sucedido!');
+        this.$refs.popup.showAlert('Login bem-sucedido!');
         setTimeout(() => {
-          this.$router.push('/admin');
+          this.$router.push('/admin/dashboard');
         }, 1000);
       } catch (error) {
         let idElemento;
@@ -78,7 +78,7 @@ export default {
         } else if (error.message.includes('Senha')) {
           idElemento = document.getElementById('error-message-senha-login');
         } else if (error.message.includes('Acesso negado')) {
-          await this.$refs.popup.showAlert('Acesso negado. Apenas administradores podem fazer login.');
+          this.$refs.popup.showAlert('Acesso negado. Apenas administradores podem fazer login.');
           return;
         }
 
@@ -103,5 +103,5 @@ export default {
 </script>
 
 <style scoped>
-@import '@/00-website/assets/css/login.css';
+@import '@/01-admin/assets/css/login.css';
 </style>
